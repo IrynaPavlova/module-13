@@ -26,19 +26,23 @@ refs.form.addEventListener("submit", event => {
   refs.gallery.innerHTML = "";
   fetch.resetPage();
   fetch.searchQuery = input.value;
-  fetch.fetchImages().then(hits => {
+  fetch.fetchImages()
+  .then(hits => {
     if (hits.length === 0) {
       PNotify.error("Try again!");
     } else refs.gallery.insertAdjacentHTML("beforeend", galleryItem(hits));
     input.value = "";
-  });
+  })
+  .catch(error => console.log(error));
 });
 
 refs.button.addEventListener("click", () => {
-  fetch.fetchImages().then(hits => {
+  fetch.fetchImages()
+  .then(hits => {
     refs.gallery.insertAdjacentHTML("beforeend", galleryItem(hits));
     fetch.scrollPage();
-  });
+  })
+  .catch(error => console.log(error));
 });
 
 refs.body.addEventListener("click", event => {
