@@ -1,0 +1,87 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(116, 114, 114);
+    padding: 0;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    color: #626262;
+    background-color: rgb(212, 232, 245);
+}
+
+input {
+    width: 40%;
+    padding: 8px 0 8px 6px;
+    font-size: 14px;
+    border: 1px solid rgb(116, 114, 114);
+    background-color: rgb(212, 232, 245);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 1200px;
+    list-style: none;
+}
+
+.stats {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    padding-left: 10px;
+
+}
+
+.stats-item{
+    margin: 0;
+}
+
+.stats-item:not(:last-of-type){
+    margin-right: 5px;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 4px;
+}
+
+.material-icons {
+    color: #ffffff;
+}
+
+.stats-item {
+    color: #ffffff;
+}
+
+.gallery-img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.modal-img {
+    object-fit: cover;
+}
