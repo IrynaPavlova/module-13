@@ -45,6 +45,7 @@ input {
     margin: 0;
     width: 1200px;
     list-style: none;
+    padding: 0;
 }
 
 .stats {
